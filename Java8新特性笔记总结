@@ -1,4 +1,4 @@
-Java8新特性实战
+#Java8新特性实战
 Java8是Oracle公司在2014年3月发布的版本，是Java5之后最重要的版本，带了了诸多方面的新特性，包括语言、类库、编译器及JVM等新特性。本文重点介绍Java8中语法相关的新特性，主要包括Lambda表达式、Stream API、New Date API、Optional等。
 Lambda表达式
 什么是Lambda
