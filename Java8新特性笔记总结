@@ -1,7 +1,8 @@
 # Java8新特性实战
 
 Java8是Oracle公司在2014年3月发布的版本，是Java5之后最重要的版本，带了了诸多方面的新特性，包括语言、类库、编译器及JVM等新特性。本文重点介绍Java8中语法相关的新特性，主要包括Lambda表达式、Stream API、New Date API、Optional等。
-Lambda表达式
+
+# Lambda表达式
 什么是Lambda
 Lambda expression is a new feature which is introduced in Java 8. A lambda expression is an anonymous function. A function that doesn’t have a name and doesn’t belong to any class. The concept of lambda expression was first introduced in LISP programming language.
 Lambda这个概念最早起源于LISP语言，Java8中引入了这个特性，Lambda表达式其实是一个匿名函数，这个函数没有名称并且不属于任何类。
@@ -204,7 +205,9 @@ Function<String, BigInteger> function = new Function<String, BigInteger>() {
 */
 Function<String, BigInteger> function = BigInteger::new;
 System.out.println(function.apply("12345678901234567890"));
-Stream API
+
+
+# Stream API
 什么是Stream
 Stream API是对集合功能的增强，借助于Lambda表达式，能够极大地提高编程效率和程序可读性。Stream处理集合数据时，将要处理的元素看做一种流，流在管道中传输，并且可以在管道的节点上处理，包括筛选、去重、排序、聚合等。元素流在管道中经过中间操作的处理，最后由结束操作得到处理结果。
 使用Stream API具有以下优势：
@@ -411,7 +414,9 @@ boolean allMatch = staffs.stream().allMatch((staff) -> staff.getAge().equals(34)
 System.out.println(allMatch);
 boolean noneMatch = staffs.stream().noneMatch((staff) -> staff.getAge().equals(34));
 System.out.println(noneMatch);
-New Date API
+
+
+# New Date API
 Java8另一项新特性是新的时间和日期API，它们被包含在java.time包中。借助新的时间和日期API可以更简洁地处理时间和日期。
 为什么需要New Date API
 在Java8之前的时间和日期API有很多缺陷，具体如下：
@@ -520,7 +525,9 @@ System.out.println(LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE))
 System.out.println(LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_TIME));
 // 2020-01-13
 System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
-Optional
+
+
+# Optional
 什么是Optional
 在Optional出现之前，Java的NullPointerException问题令人头疼，我们需要手动添加很多判空逻辑：
 为了减少这样的null值判断，Java8借鉴了Guava Optional，提供了新的Optional容器。根据官方文档定义，Optional是一个容器对象，容器中可能包含也可能不包含一个非空对象。如果对象存在，isPresent()将会返回true，get()方法将会返回一个值。
